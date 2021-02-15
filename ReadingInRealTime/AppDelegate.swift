@@ -12,7 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // 화이트 테마 유지
+        if #available(iOS 13.0, *){
+            window?.overrideUserInterfaceStyle = .light
+        }
+        
         return true
     }
 }

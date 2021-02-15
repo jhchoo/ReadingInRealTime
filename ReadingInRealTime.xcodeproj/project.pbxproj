@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E8C3D3C25DA43AF00CD1F1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E8C3D3B25DA43AF00CD1F1B /* README.md */; };
+		9E8C3D4025DA441700CD1F1B /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */; };
+		9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */; };
 		9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93A65725DA3FEC0047817C /* AppDelegate.swift */; };
 		9E93A65C25DA3FEC0047817C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93A65B25DA3FEC0047817C /* ViewController.swift */; };
 		9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A65D25DA3FEC0047817C /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E8C3D3B25DA43AF00CD1F1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E93A65425DA3FEC0047817C /* ReadingInRealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingInRealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E93A65725DA3FEC0047817C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E93A65B25DA3FEC0047817C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +65,10 @@
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
 				9E93A66025DA3FED0047817C /* Assets.xcassets */,
 				9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */,
+				9E8C3D3B25DA43AF00CD1F1B /* README.md */,
 				9E93A66525DA3FED0047817C /* Info.plist */,
+				9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */,
+				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
 			);
 			path = ReadingInRealTime;
 			sourceTree = "<group>";
@@ -123,6 +132,7 @@
 			files = (
 				9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */,
 				9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */,
+				9E8C3D3C25DA43AF00CD1F1B /* README.md in Resources */,
 				9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +146,8 @@
 			files = (
 				9E93A65C25DA3FEC0047817C /* ViewController.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
+				9E8C3D4025DA441700CD1F1B /* PreviewView.swift in Sources */,
+				9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W33H96C7PY;
 				INFOPLIST_FILE = ReadingInRealTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W33H96C7PY;
 				INFOPLIST_FILE = ReadingInRealTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
