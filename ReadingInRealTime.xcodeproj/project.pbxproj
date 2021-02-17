@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */; };
+		9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */; };
+		9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2125DCDAD600AB76CE /* VisionViewController.swift */; };
+		9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2525DCDC8800AB76CE /* StringUtils.swift */; };
 		9E8C3D3C25DA43AF00CD1F1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E8C3D3B25DA43AF00CD1F1B /* README.md */; };
-		9E8C3D4025DA441700CD1F1B /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */; };
 		9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */; };
 		9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93A65725DA3FEC0047817C /* AppDelegate.swift */; };
-		9E93A65C25DA3FEC0047817C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93A65B25DA3FEC0047817C /* ViewController.swift */; };
 		9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A65D25DA3FEC0047817C /* Main.storyboard */; };
 		9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66025DA3FED0047817C /* Assets.xcassets */; };
 		9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */; };
@@ -19,12 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeOcrAppleViewController.swift; sourceTree = "<group>"; };
+		9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKPreviewView.swift; sourceTree = "<group>"; };
+		9E709D2125DCDAD600AB76CE /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		9E709D2525DCDC8800AB76CE /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		9E8C3D3B25DA43AF00CD1F1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E93A65425DA3FEC0047817C /* ReadingInRealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingInRealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E93A65725DA3FEC0047817C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E93A65B25DA3FEC0047817C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E93A65E25DA3FEC0047817C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E93A66025DA3FED0047817C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E93A66325DA3FED0047817C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,15 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				9E93A66525DA3FED0047817C /* Info.plist */,
+				9E93A65725DA3FEC0047817C /* AppDelegate.swift */,
 				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
 				9ECD3B5E25DC8E020085E367 /* 01.Scanner */,
-				9E93A65725DA3FEC0047817C /* AppDelegate.swift */,
-				9E93A65B25DA3FEC0047817C /* ViewController.swift */,
+				9ECD3B6525DCA9FC0085E367 /* 03.RealtimeOcrApple */,
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
 				9E93A66025DA3FED0047817C /* Assets.xcassets */,
 				9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */,
 				9E8C3D3B25DA43AF00CD1F1B /* README.md */,
-				9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */,
 			);
 			path = ReadingInRealTime;
 			sourceTree = "<group>";
@@ -82,6 +85,17 @@
 				9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */,
 			);
 			path = 01.Scanner;
+			sourceTree = "<group>";
+		};
+		9ECD3B6525DCA9FC0085E367 /* 03.RealtimeOcrApple */ = {
+			isa = PBXGroup;
+			children = (
+				9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */,
+				9E709D2125DCDAD600AB76CE /* VisionViewController.swift */,
+				9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */,
+				9E709D2525DCDC8800AB76CE /* StringUtils.swift */,
+			);
+			path = 03.RealtimeOcrApple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E93A65C25DA3FEC0047817C /* ViewController.swift in Sources */,
+				9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */,
+				9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
-				9E8C3D4025DA441700CD1F1B /* PreviewView.swift in Sources */,
 				9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */,
+				9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */,
 				9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */,
+				9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

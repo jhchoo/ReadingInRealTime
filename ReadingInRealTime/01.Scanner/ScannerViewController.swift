@@ -21,7 +21,7 @@ class ScannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "바코드, QR";
+        self.title = "바코드&QR"
         
         viewBox.layer.borderWidth = 4
         viewBox.layer.borderColor = UIColor.yellow.cgColor
@@ -59,6 +59,7 @@ class ScannerViewController: UIViewController {
                 return
             }
             
+            // 아웃풋을 만들고 델리게이트를 열결한다.
             let metadataOutput = AVCaptureMetadataOutput()
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             

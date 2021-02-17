@@ -24,15 +24,15 @@ enum SampleType: Int {
     case realTime_ML_Google
     case realTime_test
     
-    var vo: (Int, String) {
+    var tuple: (String, String) {
         switch self {
-        case .barcode:              return (0, "바코드 인식 Apple")
-        case .businessCard:         return (1, "명함인식 OCR")
-        case .realTime_OCR_Apple:   return (2, "실시간 글자인식 Apple")
-        case .realTime_OCR_Google:  return (3, "실시간 글자인식 Google")
-        case .realTime_ML_Apple:    return (4, "실시간 머신러닝 Apple")
-        case .realTime_ML_Google:   return (5, "실시간 머신러닝 Google")
-        case .realTime_test:        return (6, "바코드-글자인식-머신러닝")
+        case .barcode:              return ("barcode", "바코드&QR Apple")
+        case .businessCard:         return ("card", "명함인식 OCR")
+        case .realTime_OCR_Apple:   return ("apple", "실시간 글자인식 Apple")
+        case .realTime_OCR_Google:  return ("google", "실시간 글자인식 Google")
+        case .realTime_ML_Apple:    return ("apple", "실시간 머신러닝 Apple")
+        case .realTime_ML_Google:   return ("google", "실시간 머신러닝 Google")
+        case .realTime_test:        return ("han", "바코드->글자인식->머신러닝")
         }
     }
 }
@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
         tabelView.delegate = self
         tabelView.dataSource = self
         tabelView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tabelView.tableFooterView = UIView()
     }
 
 }
@@ -59,24 +60,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        var tuple: (String, String) = ("", "")
+        
         switch indexPath.row {
         case SampleType.barcode.rawValue:
-            cell.textLabel?.text = SampleType.barcode.vo.1
+            tuple = SampleType.barcode.tuple
+            cell.accessoryType = .disclosureIndicator
         case SampleType.businessCard.rawValue:
-            cell.textLabel?.text = SampleType.businessCard.vo.1
+            tuple = SampleType.businessCard.tuple
         case SampleType.realTime_OCR_Apple.rawValue:
-            cell.textLabel?.text = SampleType.realTime_OCR_Apple.vo.1
+            tuple = SampleType.realTime_OCR_Apple.tuple
+            cell.accessoryType = .disclosureIndicator
         case SampleType.realTime_OCR_Google.rawValue:
-            cell.textLabel?.text = SampleType.realTime_OCR_Google.vo.1
+            tuple = SampleType.realTime_OCR_Google.tuple
         case SampleType.realTime_ML_Apple.rawValue:
-            cell.textLabel?.text = SampleType.realTime_ML_Apple.vo.1
+            tuple = SampleType.realTime_ML_Apple.tuple
         case SampleType.realTime_ML_Google.rawValue:
-            cell.textLabel?.text = SampleType.realTime_ML_Google.vo.1
+            tuple = SampleType.realTime_ML_Google.tuple
         case SampleType.realTime_test.rawValue:
-            cell.textLabel?.text = SampleType.realTime_test.vo.1
+            tuple = SampleType.realTime_test.tuple
         default:
             break
         }
+        
+        cell.imageView?.image = UIImage(named: tuple.0)
+        cell.textLabel?.text = tuple.1
         
         return cell
     }
@@ -93,7 +101,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case SampleType.businessCard.rawValue:
             print("11")
         case SampleType.realTime_OCR_Apple.rawValue:
-            print("11")
+            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = stroyboard.instantiateViewController(withIdentifier: "VisionVC") as? VisionViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         case SampleType.realTime_OCR_Google.rawValue:
             print("11")
         case SampleType.realTime_ML_Apple.rawValue:

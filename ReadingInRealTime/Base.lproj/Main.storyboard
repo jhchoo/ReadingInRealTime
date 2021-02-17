@@ -127,7 +127,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2b-td-SWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.8" y="122.66009852216749"/>
+            <point key="canvasLocation" x="1177" y="109"/>
+        </scene>
+        <!--Vision View Controller-->
+        <scene sceneID="CR9-gZ-ixQ">
+            <objects>
+                <viewController storyboardIdentifier="VisionVC" id="rqE-3O-SYm" customClass="VisionViewController" customModule="ReadingInRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0EO-dg-ERK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GE5-ey-EtE" customClass="HKPreviewView" customModule="ReadingInRealTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cly-0E-LKV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-uJ-3de">
+                                <rect key="frame" x="167" y="396" width="41.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NB9-6K-8BN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cly-0E-LKV" firstAttribute="leading" secondItem="0EO-dg-ERK" secondAttribute="leading" id="09f-3X-J8Z"/>
+                            <constraint firstAttribute="top" secondItem="GE5-ey-EtE" secondAttribute="top" id="5TD-IK-7AJ"/>
+                            <constraint firstAttribute="bottom" secondItem="GE5-ey-EtE" secondAttribute="bottom" id="Dri-Vt-Lcg"/>
+                            <constraint firstItem="cly-0E-LKV" firstAttribute="top" secondItem="0EO-dg-ERK" secondAttribute="top" id="Rrl-Zc-aam"/>
+                            <constraint firstItem="QH1-uJ-3de" firstAttribute="centerX" secondItem="0EO-dg-ERK" secondAttribute="centerX" id="TKy-cf-b6J"/>
+                            <constraint firstItem="QH1-uJ-3de" firstAttribute="centerY" secondItem="0EO-dg-ERK" secondAttribute="centerY" id="eQs-gV-SOg"/>
+                            <constraint firstItem="cly-0E-LKV" firstAttribute="trailing" secondItem="0EO-dg-ERK" secondAttribute="trailing" id="hwy-7j-bmz"/>
+                            <constraint firstItem="cly-0E-LKV" firstAttribute="bottom" secondItem="0EO-dg-ERK" secondAttribute="bottom" id="oMk-qh-Var"/>
+                            <constraint firstAttribute="trailing" secondItem="GE5-ey-EtE" secondAttribute="trailing" id="pga-Bd-qE3"/>
+                            <constraint firstItem="GE5-ey-EtE" firstAttribute="leading" secondItem="0EO-dg-ERK" secondAttribute="leading" id="rL5-Cg-kpa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cutoutView" destination="cly-0E-LKV" id="hf5-Er-Off"/>
+                        <outlet property="numberView" destination="QH1-uJ-3de" id="PMK-AB-8Ij"/>
+                        <outlet property="previewView" destination="GE5-ey-EtE" id="R0Y-Uz-puc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Sv-d8-OsF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.5999999999999" y="108.62068965517241"/>
         </scene>
     </scenes>
     <resources>

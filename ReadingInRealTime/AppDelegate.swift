@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.overrideUserInterfaceStyle = .light
         }
         
+        // 세로모드 고정.
+        UIDevice.current.setValue(UIDeviceOrientation.portrait.rawValue, forKey: "orientation")
+        
         return true
     }
 }
