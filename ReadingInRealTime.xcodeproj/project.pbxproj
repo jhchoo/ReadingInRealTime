@@ -15,6 +15,7 @@
 		9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A65D25DA3FEC0047817C /* Main.storyboard */; };
 		9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66025DA3FED0047817C /* Assets.xcassets */; };
 		9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */; };
+		9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9E93A66025DA3FED0047817C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E93A66325DA3FED0047817C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E93A66525DA3FED0047817C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,26 @@
 		9E93A65625DA3FEC0047817C /* ReadingInRealTime */ = {
 			isa = PBXGroup;
 			children = (
+				9E93A66525DA3FED0047817C /* Info.plist */,
+				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
+				9ECD3B5E25DC8E020085E367 /* 01.Scanner */,
 				9E93A65725DA3FEC0047817C /* AppDelegate.swift */,
 				9E93A65B25DA3FEC0047817C /* ViewController.swift */,
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
 				9E93A66025DA3FED0047817C /* Assets.xcassets */,
 				9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */,
 				9E8C3D3B25DA43AF00CD1F1B /* README.md */,
-				9E93A66525DA3FED0047817C /* Info.plist */,
 				9E8C3D3F25DA441700CD1F1B /* PreviewView.swift */,
-				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
 			);
 			path = ReadingInRealTime;
+			sourceTree = "<group>";
+		};
+		9ECD3B5E25DC8E020085E367 /* 01.Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */,
+			);
+			path = 01.Scanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				9E93A65C25DA3FEC0047817C /* ViewController.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
 				9E8C3D4025DA441700CD1F1B /* PreviewView.swift in Sources */,
+				9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */,
 				9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
