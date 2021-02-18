@@ -79,6 +79,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             tuple = SampleType.realTime_ML_Google.tuple
         case SampleType.realTime_test.rawValue:
             tuple = SampleType.realTime_test.tuple
+            cell.accessoryType = .disclosureIndicator
         default:
             break
         }
@@ -112,7 +113,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case SampleType.realTime_ML_Google.rawValue:
             print("11")
         case SampleType.realTime_test.rawValue:
-            print("11")
+            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = stroyboard.instantiateViewController(withIdentifier: "LabelCheckVC") as? LabelCheckViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         default:
             break
         }

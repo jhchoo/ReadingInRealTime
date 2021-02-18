@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E55965A25DDD60C001246AB /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55965925DDD60C001246AB /* BarcodeData.swift */; };
+		9E55965E25DDE3E6001246AB /* OcrCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55965D25DDE3E6001246AB /* OcrCheckViewController.swift */; };
+		9E55966125DDE511001246AB /* MLocrManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55966025DDE511001246AB /* MLocrManager.swift */; };
 		9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */; };
 		9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */; };
 		9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2125DCDAD600AB76CE /* VisionViewController.swift */; };
 		9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2525DCDC8800AB76CE /* StringUtils.swift */; };
+		9E709D2B25DD00E000AB76CE /* LabelCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2A25DD00E000AB76CE /* LabelCheckViewController.swift */; };
+		9E709D3025DD01A800AB76CE /* BarcodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E709D2F25DD01A800AB76CE /* BarcodeManager.swift */; };
 		9E8C3D3C25DA43AF00CD1F1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E8C3D3B25DA43AF00CD1F1B /* README.md */; };
 		9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */; };
 		9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93A65725DA3FEC0047817C /* AppDelegate.swift */; };
@@ -21,10 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E55965925DDD60C001246AB /* BarcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
+		9E55965D25DDE3E6001246AB /* OcrCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrCheckViewController.swift; sourceTree = "<group>"; };
+		9E55966025DDE511001246AB /* MLocrManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLocrManager.swift; sourceTree = "<group>"; };
 		9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeOcrAppleViewController.swift; sourceTree = "<group>"; };
 		9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKPreviewView.swift; sourceTree = "<group>"; };
 		9E709D2125DCDAD600AB76CE /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
 		9E709D2525DCDC8800AB76CE /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		9E709D2A25DD00E000AB76CE /* LabelCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCheckViewController.swift; sourceTree = "<group>"; };
+		9E709D2F25DD01A800AB76CE /* BarcodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeManager.swift; sourceTree = "<group>"; };
 		9E8C3D3B25DA43AF00CD1F1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9E93A65425DA3FEC0047817C /* ReadingInRealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingInRealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E709D2925DD006A00AB76CE /* 07.LabelCheck */ = {
+			isa = PBXGroup;
+			children = (
+				9E55965925DDD60C001246AB /* BarcodeData.swift */,
+				9E709D2F25DD01A800AB76CE /* BarcodeManager.swift */,
+				9E709D2A25DD00E000AB76CE /* LabelCheckViewController.swift */,
+				9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */,
+				9E55966025DDE511001246AB /* MLocrManager.swift */,
+				9E55965D25DDE3E6001246AB /* OcrCheckViewController.swift */,
+			);
+			path = 07.LabelCheck;
+			sourceTree = "<group>";
+		};
 		9E93A64B25DA3FEC0047817C = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +94,7 @@
 				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
 				9ECD3B5E25DC8E020085E367 /* 01.Scanner */,
 				9ECD3B6525DCA9FC0085E367 /* 03.RealtimeOcrApple */,
+				9E709D2925DD006A00AB76CE /* 07.LabelCheck */,
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
 				9E93A66025DA3FED0047817C /* Assets.xcassets */,
 				9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */,
@@ -92,7 +116,6 @@
 			children = (
 				9E709D1525DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift */,
 				9E709D2125DCDAD600AB76CE /* VisionViewController.swift */,
-				9E709D1A25DCB94A00AB76CE /* HKPreviewView.swift */,
 				9E709D2525DCDC8800AB76CE /* StringUtils.swift */,
 			);
 			path = 03.RealtimeOcrApple;
@@ -171,10 +194,15 @@
 			files = (
 				9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */,
 				9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */,
+				9E55965A25DDD60C001246AB /* BarcodeData.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
+				9E709D3025DD01A800AB76CE /* BarcodeManager.swift in Sources */,
+				9E55965E25DDE3E6001246AB /* OcrCheckViewController.swift in Sources */,
 				9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */,
 				9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */,
 				9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */,
+				9E55966125DDE511001246AB /* MLocrManager.swift in Sources */,
+				9E709D2B25DD00E000AB76CE /* LabelCheckViewController.swift in Sources */,
 				9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,16 +350,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W33H96C7PY;
+				DEVELOPMENT_TEAM = NYKGEX3NH4;
 				INFOPLIST_FILE = ReadingInRealTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jhchoo.ReadingInRealTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hankooktech.ReadingInRealTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -342,16 +372,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W33H96C7PY;
+				DEVELOPMENT_TEAM = NYKGEX3NH4;
 				INFOPLIST_FILE = ReadingInRealTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jhchoo.ReadingInRealTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hankooktech.ReadingInRealTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

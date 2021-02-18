@@ -7,6 +7,15 @@ Utilities for dealing with recognized strings
 
 import Foundation
 
+extension String {
+    // 숫자인지 확인
+    func isNumeric() -> Bool {
+        let set = CharacterSet.decimalDigits
+        for us in self.unicodeScalars where !set.contains(us) { return false }
+        return true
+    }
+}
+
 extension Character {
     // Given a list of allowed characters, try to convert self to those in list
     // if not already in it. This handles some common misclassifications for
