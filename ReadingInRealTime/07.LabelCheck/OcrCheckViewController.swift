@@ -32,6 +32,11 @@ class OcrCheckViewController: UIViewController {
         UIDevice.current.setValue(UIDeviceOrientation.portrait.rawValue, forKey: "orientation")
         
         mom.setupCamera(preview: previewView, coutview: cutoutView, delegate: self)
+        if selectCode == BarcodeData.shared.CODE_TITLE_240664 {
+            mom.setupLabelType(orientation: .portrait)
+        } else if selectCode == BarcodeData.shared.CODE_TITLE_504056 {
+            mom.setupLabelType(orientation: .landscape)
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -98,13 +103,15 @@ extension OcrCheckViewController: MLocrManagerDelegate {
             var checkCount: Int = 0
             BarcodeData.shared.CODE_DATA_240664.forEach { (tireData) in
                 array.forEach { text in
-                    if text.lowercased().contains(tireData.title.lowercased()) && tireData.check == 0 {
-                        tireData.check = 1
-                        isReloadData = true
+                    if tireData.check == false {
+                        if text.lowercased().contains(tireData.title.lowercased()) {
+                            tireData.check = true
+                            isReloadData = true
+                        }
                     }
                 }
                 
-                if tireData.check  > 0 {
+                if tireData.check == true {
                     checkCount += 1
                 }
             }
@@ -120,15 +127,16 @@ extension OcrCheckViewController: MLocrManagerDelegate {
             BarcodeData.shared.CODE_DATA_504056.forEach { (tireData) in
                 array.forEach { text in
                     print("비교 \(tireData.title.lowercased()) == \(text.lowercased())")
-                    if (text.lowercased().contains(tireData.title.lowercased()) ||
-                        text.lowercased().contains(tireData.title2.lowercased()) )
-                        && tireData.check == 0 {
-                        tireData.check = 1
-                        isReloadData = true
+                    if tireData.check == false {
+                        if (text.lowercased().contains(tireData.title.lowercased()) ||
+                            text.lowercased().contains(tireData.title2.lowercased()) ) {
+                            tireData.check = true
+                            isReloadData = true
+                        }
                     }
                 }
                 
-                if tireData.check > 0 {
+                if tireData.check == true {
                     checkCount += 1
                 }
             }
@@ -179,20 +187,16 @@ extension OcrCheckViewController: UITableViewDelegate, UITableViewDataSource {
         if selectCode == BarcodeData.shared.CODE_TITLE_240664 {
             let item = BarcodeData.shared.CODE_DATA_240664[indexPath.row]
             cell.textLabel?.text = item.title
-            if item.check == 1 {
+            if item.check == true {
                 cell.backgroundColor = .green
-            } else if item.check == 2 {
-                cell.backgroundColor = .lightGray
             } else {
                 cell.backgroundColor = .white
             }
         } else if selectCode == BarcodeData.shared.CODE_TITLE_504056 {
             let item = BarcodeData.shared.CODE_DATA_504056[indexPath.row]
             cell.textLabel?.text = item.title
-            if item.check == 1 {
+            if item.check == true {
                 cell.backgroundColor = .green
-            } else if item.check == 2 {
-                cell.backgroundColor = .lightGray
             } else {
                 cell.backgroundColor = .white
             }

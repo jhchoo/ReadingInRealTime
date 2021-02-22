@@ -15,7 +15,9 @@ class VisionViewController: RealtimeOcrAppleViewController {
     var txtRequest: VNRecognizeTextRequest?
     // 임시 문자열 추적기
     let numberTracker = StringTracker()
-
+    
+    var uiHold: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,16 @@ class VisionViewController: RealtimeOcrAppleViewController {
         // ViewController가 카메라를 설정하도록하기 전에 비전 요청을 설정하십시오.
         // 첫 번째 버퍼가 수신 될 때 존재하도록합니다.
         txtRequest = VNRecognizeTextRequest{ [weak self] (req, err) in
-            self?.recognizeTextHandler(request: req, error: err)
+            guard let self = self else {
+                return
+            }
+            self.uiHold = true
+            
+            self.recognizeTextHandler(request: req, error: err)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.uiHold = false
+            }
         }
             
         // VNRecognizeTextRequestRevision2
@@ -35,6 +46,13 @@ class VisionViewController: RealtimeOcrAppleViewController {
         guard let request = txtRequest else {
             return
         }
+        
+        // 이걸 안하면, Error computing NN outputs 오류가 생길 수 있다.
+        // request.usesCPUOnly = true
+        // GPU 와 함께 사용하면 오류가 있는데 어떻게 해야 고칠 수 있나?
+        // 일단 GPU를 쓸때는 asyncAfter 를 사용해 텀을 주어야 한다.
+        // 실시간이 아니면 상관이 없고, 실시간이면 텀을 주도록 하자.
+        request.usesCPUOnly = false
         
         // 빠른속도
         // request.recognitionLevel = .fast
@@ -49,9 +67,14 @@ class VisionViewController: RealtimeOcrAppleViewController {
     deinit {
         print("VisionViewController deinit")
     }
-
+    
     // captureOutput 오버라이딩 해서 버퍼를 확인하고 그린다.
     override func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+        if self.uiHold {
+            return
+        }
+        
         if let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
             
             guard let request = txtRequest else {

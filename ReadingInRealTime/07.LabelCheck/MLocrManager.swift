@@ -60,7 +60,38 @@ class MLocrManager: NSObject {
     // 기기 방향. 방향이 지원되는 다른 방향으로 변경 될 때마다 업데이트됩니다.
     var currentOrientation = UIDeviceOrientation.portrait
     
+    enum LabelOrientation {
+        case portrait
+        case landscape
+    }
     
+    var desiredHeightRatio = 0.3 //0.15
+    var desiredWidthRatio = 1.0 //0.6
+    var maxPortraitWidth = 1.0 //0.8
+    
+    func setupLabelType(orientation: LabelOrientation) {
+        switch orientation {
+        case .portrait:
+            desiredHeightRatio = 1.0
+            desiredWidthRatio = 0.6
+            maxPortraitWidth = 0.6
+        case .landscape:
+            desiredHeightRatio = 0.3 //0.15
+            desiredWidthRatio = 1.0 //0.6
+            maxPortraitWidth = 1.0 //0.8
+        }
+    }
+    func supportedRecognitionLanguages() {
+        do {
+            let revision = VNRecognizeTextRequest.currentRevision
+            let languages = try VNRecognizeTextRequest.supportedRecognitionLanguages(for: .accurate, revision: revision)
+            print("VNRecognizeTextRequest revision = \(revision), \(languages)")
+        } catch {
+            print("ERROR")
+        }
+        // ["en-US", "fr-FR", "it-IT", "de-DE", "es-ES", "pt-BR", "zh-Hans", "zh-Hant"]
+        // ["영어", "프랑스어", "이탈리아어", "독일어", "스페인", "포르투칼-브라질어", "중국어간체", "중국어번체"] // 7개국어
+    }
     func setupCamera(preview: HKPreviewView, coutview: UIView, delegate: MLocrManagerDelegate) {
 
         self.preview = preview
@@ -114,9 +145,9 @@ class MLocrManager: NSObject {
         // UI가 세로로 회전 할 때 세로 크기를 동일하게 유지합니다 (버퍼 픽셀 단위).
         // 또한 가로 크기를 최대 비율까지 동일하게 유지하십시오.
         
-        let desiredHeightRatio = 0.3 //0.15
-        let desiredWidthRatio = 1.0 //0.6
-        let maxPortraitWidth = 1.0 //0.8
+        //let desiredHeightRatio = 0.3 //0.15
+        //let desiredWidthRatio = 1.0 //0.6
+        //let maxPortraitWidth = 1.0 //0.8
         
         // Figure out size of ROI.
         let size: CGSize
@@ -282,11 +313,14 @@ class MLocrManager: NSObject {
         // ViewController가 카메라를 설정하도록하기 전에 비전 요청을 설정하십시오.
         // 첫 번째 버퍼가 수신 될 때 존재하도록합니다.
         txtRequest = VNRecognizeTextRequest{ [weak self] (req, err) in
-            if let err = err as NSError? {
-                fatalError("\n\n\n\n\n @@@@@@@  error \(err), \(err.userInfo)")
+            guard let self = self else {
+                return
             }
+            self.uiHold = true
             
-            self?.recognizeTextHandler(request: req, error: err)
+            self.recognizeTextHandler(request: req, error: err)
+            
+            self.uiHold = false
         }
         
         // 이걸 안하면, Error computing NN outputs 오류가 생길 수 있다.
@@ -299,6 +333,7 @@ class MLocrManager: NSObject {
         
         // 빠른속도
         // request.recognitionLevel = .fast
+        
         // 높은 정확성
         txtRequest.recognitionLevel = .accurate
         
@@ -310,6 +345,10 @@ class MLocrManager: NSObject {
 
 extension MLocrManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        if self.uiHold {
+            return
+        }
+        
         if let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
             // 최대 속도를 위해 관심 영역에서만 실행.
             txtRequest.regionOfInterest = regionOfInterest
@@ -329,16 +368,10 @@ extension MLocrManager {
     
     // 시각 인식 핸들러.
     func recognizeTextHandler(request: VNRequest, error: Error?) {
-        if uiHold {
-            return
-        }
-        self.uiHold = true
-        
         var numbers = [String]()
         var redBoxes = [CGRect]() // Shows all recognized text lines
         
         guard let results = request.results as? [VNRecognizedTextObservation] else {
-            self.uiHold = false
             show(boxGroups: [])
             return
         }
@@ -362,7 +395,6 @@ extension MLocrManager {
         
         // 두글자 이하 체크 후 글자가 없으면 종료
         if numbers.count == 0 {
-            self.uiHold = false
             show(boxGroups: [])
             return
         }
@@ -372,8 +404,6 @@ extension MLocrManager {
         
         // 발견된 문자 리스트 전달
         self.delegate?.stringFound(array: numbers)
-        
-        self.uiHold = false
     }
     
     // MARK: - 경계 상자 그리기

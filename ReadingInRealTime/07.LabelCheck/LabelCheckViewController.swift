@@ -25,9 +25,12 @@ class LabelCheckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "상품번호 인식"
+        self.title = "상품정보확인"
         // 세로모드 고정.
         UIDevice.current.setValue(UIDeviceOrientation.portrait.rawValue, forKey: "orientation")
+        
+        // 서포팅 언어 확인
+        // mom.supportedRecognitionLanguages()
         
         // 캡쳐 시작
         // bm.setupCamera(preview: cameraView, coutview: cutoutView, delegate: self)
@@ -40,7 +43,8 @@ class LabelCheckViewController: UIViewController {
         
         defaultValueUpdate()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "재시도", style: .plain, target: self, action: #selector(refreshTapped))
+        // 우측 상단 버튼
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "재시도", style: .plain, target: self, action: #selector(rightTapped))
     }
     
     deinit {
@@ -55,7 +59,7 @@ class LabelCheckViewController: UIViewController {
         mom.updateCutout()
     }
     
-    @objc func refreshTapped() {
+    @objc func rightTapped() {
         // 재시도 버튼, 초기화 시킴
         // bm.startRunning()
         mom.startRunning()

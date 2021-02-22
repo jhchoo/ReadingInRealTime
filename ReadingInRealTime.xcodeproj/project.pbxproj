@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,8 +22,46 @@
 		9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A65D25DA3FEC0047817C /* Main.storyboard */; };
 		9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66025DA3FED0047817C /* Assets.xcassets */; };
 		9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */; };
+		9EC6F2BB25E372BD00654D08 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2BA25E372BD00654D08 /* CardViewController.swift */; };
+		9EC6F2CB25E3780B00654D08 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */; };
+		9EC6F2CC25E3780B00654D08 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */; };
+		9EC6F2CF25E37DEE00654D08 /* TableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2CE25E37DEE00654D08 /* TableViewExtention.swift */; };
+		9EC6F2DE25E3816700654D08 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2DD25E3816700654D08 /* CardData.swift */; };
+		9EC6F2E225E3844200654D08 /* CardRecognizeTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2E125E3844200654D08 /* CardRecognizeTextManager.swift */; };
+		9EC6F2E925E38E4D00654D08 /* CardTesseractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2E825E38E4D00654D08 /* CardTesseractManager.swift */; };
+		9EC6F30725E3907700654D08 /* libtesseract.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6F30325E3900300654D08 /* libtesseract.xcframework */; };
+		9EC6F30825E3907700654D08 /* libtesseract.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6F30325E3900300654D08 /* libtesseract.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EC6F30C25E390F500654D08 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6F30A25E3908E00654D08 /* libz.tbd */; };
+		9EC6F30D25E390FD00654D08 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6F30B25E3909800654D08 /* libc++.tbd */; };
+		9EC6F31E25E3924800654D08 /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F30F25E3924800654D08 /* SwiftyTesseractError.swift */; };
+		9EC6F31F25E3924800654D08 /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31025E3924800654D08 /* TesseractVariableName.swift */; };
+		9EC6F32025E3924800654D08 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31125E3924800654D08 /* ResultIteratorLevel.swift */; };
+		9EC6F32125E3924800654D08 /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31225E3924800654D08 /* RecognitionLanguage.swift */; };
+		9EC6F32225E3924800654D08 /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31325E3924800654D08 /* EngineMode.swift */; };
+		9EC6F32325E3924800654D08 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31525E3924800654D08 /* BoundingBox.swift */; };
+		9EC6F32425E3924800654D08 /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31625E3924800654D08 /* RecognizedBlock.swift */; };
+		9EC6F32525E3924800654D08 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31825E3924800654D08 /* LanguageModelDataSource.swift */; };
+		9EC6F32625E3924800654D08 /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31925E3924800654D08 /* LanguageStringConverter.swift */; };
+		9EC6F32725E3924800654D08 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31B25E3924800654D08 /* String+Extensions.swift */; };
+		9EC6F32825E3924800654D08 /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31C25E3924800654D08 /* Bundle+pathToTrainedData.swift */; };
+		9EC6F32925E3924800654D08 /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F31D25E3924800654D08 /* SwiftyTesseract.swift */; };
+		9EC6F32B25E3951600654D08 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9EC6F32A25E3951600654D08 /* tessdata */; };
 		9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EC6F30925E3907700654D08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9EC6F30825E3907700654D08 /* libtesseract.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9E55965925DDD60C001246AB /* BarcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
@@ -43,6 +81,29 @@
 		9E93A66025DA3FED0047817C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E93A66325DA3FED0047817C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E93A66525DA3FED0047817C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EC6F2BA25E372BD00654D08 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
+		9EC6F2CE25E37DEE00654D08 /* TableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtention.swift; sourceTree = "<group>"; };
+		9EC6F2DD25E3816700654D08 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		9EC6F2E125E3844200654D08 /* CardRecognizeTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecognizeTextManager.swift; sourceTree = "<group>"; };
+		9EC6F2E825E38E4D00654D08 /* CardTesseractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTesseractManager.swift; sourceTree = "<group>"; };
+		9EC6F30325E3900300654D08 /* libtesseract.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libtesseract.xcframework; sourceTree = "<group>"; };
+		9EC6F30A25E3908E00654D08 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9EC6F30B25E3909800654D08 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9EC6F30F25E3924800654D08 /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTesseractError.swift; sourceTree = "<group>"; };
+		9EC6F31025E3924800654D08 /* TesseractVariableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesseractVariableName.swift; sourceTree = "<group>"; };
+		9EC6F31125E3924800654D08 /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultIteratorLevel.swift; sourceTree = "<group>"; };
+		9EC6F31225E3924800654D08 /* RecognitionLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionLanguage.swift; sourceTree = "<group>"; };
+		9EC6F31325E3924800654D08 /* EngineMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineMode.swift; sourceTree = "<group>"; };
+		9EC6F31525E3924800654D08 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		9EC6F31625E3924800654D08 /* RecognizedBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizedBlock.swift; sourceTree = "<group>"; };
+		9EC6F31825E3924800654D08 /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageModelDataSource.swift; sourceTree = "<group>"; };
+		9EC6F31925E3924800654D08 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageStringConverter.swift; sourceTree = "<group>"; };
+		9EC6F31B25E3924800654D08 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		9EC6F31C25E3924800654D08 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
+		9EC6F31D25E3924800654D08 /* SwiftyTesseract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTesseract.swift; sourceTree = "<group>"; };
+		9EC6F32A25E3951600654D08 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		9ECD3B5F25DC8E200085E367 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC6F30D25E390FD00654D08 /* libc++.tbd in Frameworks */,
+				9EC6F30C25E390F500654D08 /* libz.tbd in Frameworks */,
+				9EC6F30725E3907700654D08 /* libtesseract.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +139,7 @@
 			children = (
 				9E93A65625DA3FEC0047817C /* ReadingInRealTime */,
 				9E93A65525DA3FEC0047817C /* Products */,
+				9EC6F30625E3907700654D08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,10 +154,12 @@
 		9E93A65625DA3FEC0047817C /* ReadingInRealTime */ = {
 			isa = PBXGroup;
 			children = (
+				9EC6F32A25E3951600654D08 /* tessdata */,
 				9E93A66525DA3FED0047817C /* Info.plist */,
 				9E93A65725DA3FEC0047817C /* AppDelegate.swift */,
 				9E8C3D4225DA488B00CD1F1B /* HomeViewController.swift */,
 				9ECD3B5E25DC8E020085E367 /* 01.Scanner */,
+				9EC6F2B925E3729C00654D08 /* 02.Card */,
 				9ECD3B6525DCA9FC0085E367 /* 03.RealtimeOcrApple */,
 				9E709D2925DD006A00AB76CE /* 07.LabelCheck */,
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
@@ -101,6 +168,82 @@
 				9E8C3D3B25DA43AF00CD1F1B /* README.md */,
 			);
 			path = ReadingInRealTime;
+			sourceTree = "<group>";
+		};
+		9EC6F2B925E3729C00654D08 /* 02.Card */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F2EB25E38EFD00654D08 /* SwiftyTesseract */,
+				9EC6F30325E3900300654D08 /* libtesseract.xcframework */,
+				9EC6F2DD25E3816700654D08 /* CardData.swift */,
+				9EC6F2BA25E372BD00654D08 /* CardViewController.swift */,
+				9EC6F2E125E3844200654D08 /* CardRecognizeTextManager.swift */,
+				9EC6F2E825E38E4D00654D08 /* CardTesseractManager.swift */,
+				9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */,
+				9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */,
+				9EC6F2CE25E37DEE00654D08 /* TableViewExtention.swift */,
+			);
+			path = 02.Card;
+			sourceTree = "<group>";
+		};
+		9EC6F2EB25E38EFD00654D08 /* SwiftyTesseract */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F30E25E3924800654D08 /* Enums */,
+				9EC6F31A25E3924800654D08 /* Extensions */,
+				9EC6F31725E3924800654D08 /* Protocols */,
+				9EC6F31425E3924800654D08 /* Structs */,
+				9EC6F31D25E3924800654D08 /* SwiftyTesseract.swift */,
+			);
+			path = SwiftyTesseract;
+			sourceTree = "<group>";
+		};
+		9EC6F30625E3907700654D08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F30B25E3909800654D08 /* libc++.tbd */,
+				9EC6F30A25E3908E00654D08 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC6F30E25E3924800654D08 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F30F25E3924800654D08 /* SwiftyTesseractError.swift */,
+				9EC6F31025E3924800654D08 /* TesseractVariableName.swift */,
+				9EC6F31125E3924800654D08 /* ResultIteratorLevel.swift */,
+				9EC6F31225E3924800654D08 /* RecognitionLanguage.swift */,
+				9EC6F31325E3924800654D08 /* EngineMode.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9EC6F31425E3924800654D08 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F31525E3924800654D08 /* BoundingBox.swift */,
+				9EC6F31625E3924800654D08 /* RecognizedBlock.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		9EC6F31725E3924800654D08 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F31825E3924800654D08 /* LanguageModelDataSource.swift */,
+				9EC6F31925E3924800654D08 /* LanguageStringConverter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9EC6F31A25E3924800654D08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6F31B25E3924800654D08 /* String+Extensions.swift */,
+				9EC6F31C25E3924800654D08 /* Bundle+pathToTrainedData.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9ECD3B5E25DC8E020085E367 /* 01.Scanner */ = {
@@ -131,6 +274,7 @@
 				9E93A65025DA3FEC0047817C /* Sources */,
 				9E93A65125DA3FEC0047817C /* Frameworks */,
 				9E93A65225DA3FEC0047817C /* Resources */,
+				9EC6F30925E3907700654D08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,8 +324,10 @@
 			files = (
 				9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */,
 				9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */,
+				9EC6F2CC25E3780B00654D08 /* CardTableViewCell.xib in Resources */,
 				9E8C3D3C25DA43AF00CD1F1B /* README.md in Resources */,
 				9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */,
+				9EC6F32B25E3951600654D08 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,18 +338,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC6F32225E3924800654D08 /* EngineMode.swift in Sources */,
 				9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */,
 				9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */,
+				9EC6F32325E3924800654D08 /* BoundingBox.swift in Sources */,
+				9EC6F32425E3924800654D08 /* RecognizedBlock.swift in Sources */,
 				9E55965A25DDD60C001246AB /* BarcodeData.swift in Sources */,
+				9EC6F31E25E3924800654D08 /* SwiftyTesseractError.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
+				9EC6F32725E3924800654D08 /* String+Extensions.swift in Sources */,
 				9E709D3025DD01A800AB76CE /* BarcodeManager.swift in Sources */,
 				9E55965E25DDE3E6001246AB /* OcrCheckViewController.swift in Sources */,
+				9EC6F32125E3924800654D08 /* RecognitionLanguage.swift in Sources */,
+				9EC6F2E925E38E4D00654D08 /* CardTesseractManager.swift in Sources */,
 				9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */,
 				9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */,
+				9EC6F2CF25E37DEE00654D08 /* TableViewExtention.swift in Sources */,
+				9EC6F31F25E3924800654D08 /* TesseractVariableName.swift in Sources */,
+				9EC6F32025E3924800654D08 /* ResultIteratorLevel.swift in Sources */,
 				9E8C3D4325DA488B00CD1F1B /* HomeViewController.swift in Sources */,
 				9E55966125DDE511001246AB /* MLocrManager.swift in Sources */,
+				9EC6F2E225E3844200654D08 /* CardRecognizeTextManager.swift in Sources */,
+				9EC6F32525E3924800654D08 /* LanguageModelDataSource.swift in Sources */,
+				9EC6F32825E3924800654D08 /* Bundle+pathToTrainedData.swift in Sources */,
+				9EC6F2BB25E372BD00654D08 /* CardViewController.swift in Sources */,
+				9EC6F32625E3924800654D08 /* LanguageStringConverter.swift in Sources */,
 				9E709D2B25DD00E000AB76CE /* LabelCheckViewController.swift in Sources */,
+				9EC6F32925E3924800654D08 /* SwiftyTesseract.swift in Sources */,
+				9EC6F2DE25E3816700654D08 /* CardData.swift in Sources */,
 				9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */,
+				9EC6F2CB25E3780B00654D08 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

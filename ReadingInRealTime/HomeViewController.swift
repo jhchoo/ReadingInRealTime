@@ -32,7 +32,7 @@ enum SampleType: Int {
         case .realTime_OCR_Google:  return ("google", "실시간 글자인식 Google")
         case .realTime_ML_Apple:    return ("apple", "실시간 머신러닝 Apple")
         case .realTime_ML_Google:   return ("google", "실시간 머신러닝 Google")
-        case .realTime_test:        return ("han", "바코드->글자인식->머신러닝")
+        case .realTime_test:        return ("han", "상품번호->글자인식->머신러닝")
         }
     }
 }
@@ -68,6 +68,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.accessoryType = .disclosureIndicator
         case SampleType.businessCard.rawValue:
             tuple = SampleType.businessCard.tuple
+            cell.accessoryType = .disclosureIndicator
         case SampleType.realTime_OCR_Apple.rawValue:
             tuple = SampleType.realTime_OCR_Apple.tuple
             cell.accessoryType = .disclosureIndicator
@@ -100,7 +101,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case SampleType.businessCard.rawValue:
-            print("11")
+            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = stroyboard.instantiateViewController(withIdentifier: "CardVC") as? CardViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         case SampleType.realTime_OCR_Apple.rawValue:
             let stroyboard = UIStoryboard(name: "Main", bundle: nil)
             if let vc = stroyboard.instantiateViewController(withIdentifier: "VisionVC") as? VisionViewController {
