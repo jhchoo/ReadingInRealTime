@@ -23,6 +23,7 @@ enum SampleType: Int {
     case realTime_ML_Apple
     case realTime_ML_Google
     case realTime_test
+    case stt_Apple
     
     var tuple: (String, String) {
         switch self {
@@ -30,9 +31,10 @@ enum SampleType: Int {
         case .businessCard:         return ("card", "명함인식 OCR")
         case .realTime_OCR_Apple:   return ("apple", "실시간 글자인식 Apple")
         case .realTime_OCR_Google:  return ("google", "실시간 글자인식 Google")
-        case .realTime_ML_Apple:    return ("apple", "실시간 머신러닝 Apple")
-        case .realTime_ML_Google:   return ("google", "실시간 머신러닝 Google")
-        case .realTime_test:        return ("han", "상품번호->글자인식->머신러닝")
+        case .realTime_ML_Apple:    return ("apple", "이미지 오브젝트 머신러닝 Apple")
+        case .realTime_ML_Google:   return ("google", "이미지 오브젝트 머신러닝 Google")
+        case .realTime_test:        return ("han", "상품번호인식 -> 글자인식 샘플")
+        case .stt_Apple:            return ("apple", "STT Apple 사용")
         }
     }
 }
@@ -54,7 +56,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,10 +78,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             tuple = SampleType.realTime_OCR_Google.tuple
         case SampleType.realTime_ML_Apple.rawValue:
             tuple = SampleType.realTime_ML_Apple.tuple
+            cell.accessoryType = .disclosureIndicator
         case SampleType.realTime_ML_Google.rawValue:
             tuple = SampleType.realTime_ML_Google.tuple
         case SampleType.realTime_test.rawValue:
             tuple = SampleType.realTime_test.tuple
+            cell.accessoryType = .disclosureIndicator
+        case SampleType.stt_Apple.rawValue:
+            tuple = SampleType.stt_Apple.tuple
             cell.accessoryType = .disclosureIndicator
         default:
             break
@@ -113,12 +119,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case SampleType.realTime_OCR_Google.rawValue:
             print("11")
         case SampleType.realTime_ML_Apple.rawValue:
-            print("11")
+            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = stroyboard.instantiateViewController(withIdentifier: "AppleMachineVC") as? AppleMachineViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         case SampleType.realTime_ML_Google.rawValue:
-            print("11")
+            print("22")
         case SampleType.realTime_test.rawValue:
             let stroyboard = UIStoryboard(name: "Main", bundle: nil)
             if let vc = stroyboard.instantiateViewController(withIdentifier: "LabelCheckVC") as? LabelCheckViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case SampleType.stt_Apple.rawValue:
+            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = stroyboard.instantiateViewController(withIdentifier: "SttVC") as? SttViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         default:

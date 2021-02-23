@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1AFA1D25E46D190039DF19 /* LabelObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9E1AFA1C25E46D190039DF19 /* LabelObjectDetector.mlmodel */; };
+		9E1AFA1F25E46DB40039DF19 /* AppleMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1AFA1E25E46DB40039DF19 /* AppleMachineViewController.swift */; };
 		9E55965A25DDD60C001246AB /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55965925DDD60C001246AB /* BarcodeData.swift */; };
 		9E55965E25DDE3E6001246AB /* OcrCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55965D25DDE3E6001246AB /* OcrCheckViewController.swift */; };
 		9E55966125DDE511001246AB /* MLocrManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E55966025DDE511001246AB /* MLocrManager.swift */; };
@@ -22,6 +24,9 @@
 		9E93A65F25DA3FEC0047817C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A65D25DA3FEC0047817C /* Main.storyboard */; };
 		9E93A66125DA3FED0047817C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66025DA3FED0047817C /* Assets.xcassets */; };
 		9E93A66425DA3FED0047817C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */; };
+		9EB7804E25E4737900D854D0 /* JHSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB7804D25E4737800D854D0 /* JHSpeech.swift */; };
+		9EB7805025E4738F00D854D0 /* SttViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB7804F25E4738F00D854D0 /* SttViewController.swift */; };
+		9EB7805225E489A100D854D0 /* AudioPowerVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB7805125E489A100D854D0 /* AudioPowerVisualizerView.swift */; };
 		9EC6F2BB25E372BD00654D08 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2BA25E372BD00654D08 /* CardViewController.swift */; };
 		9EC6F2CB25E3780B00654D08 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */; };
 		9EC6F2CC25E3780B00654D08 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */; };
@@ -64,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E1AFA1C25E46D190039DF19 /* LabelObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LabelObjectDetector.mlmodel; sourceTree = "<group>"; };
+		9E1AFA1E25E46DB40039DF19 /* AppleMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMachineViewController.swift; sourceTree = "<group>"; };
 		9E55965925DDD60C001246AB /* BarcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
 		9E55965D25DDE3E6001246AB /* OcrCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrCheckViewController.swift; sourceTree = "<group>"; };
 		9E55966025DDE511001246AB /* MLocrManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLocrManager.swift; sourceTree = "<group>"; };
@@ -81,6 +88,9 @@
 		9E93A66025DA3FED0047817C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E93A66325DA3FED0047817C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E93A66525DA3FED0047817C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB7804D25E4737800D854D0 /* JHSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHSpeech.swift; sourceTree = "<group>"; };
+		9EB7804F25E4738F00D854D0 /* SttViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SttViewController.swift; sourceTree = "<group>"; };
+		9EB7805125E489A100D854D0 /* AudioPowerVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPowerVisualizerView.swift; sourceTree = "<group>"; };
 		9EC6F2BA25E372BD00654D08 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1AFA1A25E46CC20039DF19 /* 05.MachineLearning */ = {
+			isa = PBXGroup;
+			children = (
+				9E1AFA1C25E46D190039DF19 /* LabelObjectDetector.mlmodel */,
+				9E1AFA1E25E46DB40039DF19 /* AppleMachineViewController.swift */,
+			);
+			path = 05.MachineLearning;
+			sourceTree = "<group>";
+		};
 		9E709D2925DD006A00AB76CE /* 07.LabelCheck */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +180,9 @@
 				9ECD3B5E25DC8E020085E367 /* 01.Scanner */,
 				9EC6F2B925E3729C00654D08 /* 02.Card */,
 				9ECD3B6525DCA9FC0085E367 /* 03.RealtimeOcrApple */,
+				9E1AFA1A25E46CC20039DF19 /* 05.MachineLearning */,
 				9E709D2925DD006A00AB76CE /* 07.LabelCheck */,
+				9EB7804C25E4735900D854D0 /* 08.STT */,
 				9E93A65D25DA3FEC0047817C /* Main.storyboard */,
 				9E93A66025DA3FED0047817C /* Assets.xcassets */,
 				9E93A66225DA3FED0047817C /* LaunchScreen.storyboard */,
@@ -170,15 +191,25 @@
 			path = ReadingInRealTime;
 			sourceTree = "<group>";
 		};
+		9EB7804C25E4735900D854D0 /* 08.STT */ = {
+			isa = PBXGroup;
+			children = (
+				9EB7804D25E4737800D854D0 /* JHSpeech.swift */,
+				9EB7805125E489A100D854D0 /* AudioPowerVisualizerView.swift */,
+				9EB7804F25E4738F00D854D0 /* SttViewController.swift */,
+			);
+			path = 08.STT;
+			sourceTree = "<group>";
+		};
 		9EC6F2B925E3729C00654D08 /* 02.Card */ = {
 			isa = PBXGroup;
 			children = (
 				9EC6F2EB25E38EFD00654D08 /* SwiftyTesseract */,
 				9EC6F30325E3900300654D08 /* libtesseract.xcframework */,
+				9EC6F2E825E38E4D00654D08 /* CardTesseractManager.swift */,
 				9EC6F2DD25E3816700654D08 /* CardData.swift */,
 				9EC6F2BA25E372BD00654D08 /* CardViewController.swift */,
 				9EC6F2E125E3844200654D08 /* CardRecognizeTextManager.swift */,
-				9EC6F2E825E38E4D00654D08 /* CardTesseractManager.swift */,
 				9EC6F2C925E3780B00654D08 /* CardTableViewCell.swift */,
 				9EC6F2CA25E3780B00654D08 /* CardTableViewCell.xib */,
 				9EC6F2CE25E37DEE00654D08 /* TableViewExtention.swift */,
@@ -340,16 +371,20 @@
 			files = (
 				9EC6F32225E3924800654D08 /* EngineMode.swift in Sources */,
 				9E709D1625DCAADA00AB76CE /* RealtimeOcrAppleViewController.swift in Sources */,
+				9E1AFA1F25E46DB40039DF19 /* AppleMachineViewController.swift in Sources */,
 				9E709D1B25DCB94A00AB76CE /* HKPreviewView.swift in Sources */,
 				9EC6F32325E3924800654D08 /* BoundingBox.swift in Sources */,
 				9EC6F32425E3924800654D08 /* RecognizedBlock.swift in Sources */,
 				9E55965A25DDD60C001246AB /* BarcodeData.swift in Sources */,
 				9EC6F31E25E3924800654D08 /* SwiftyTesseractError.swift in Sources */,
 				9E93A65825DA3FEC0047817C /* AppDelegate.swift in Sources */,
+				9E1AFA1D25E46D190039DF19 /* LabelObjectDetector.mlmodel in Sources */,
 				9EC6F32725E3924800654D08 /* String+Extensions.swift in Sources */,
 				9E709D3025DD01A800AB76CE /* BarcodeManager.swift in Sources */,
 				9E55965E25DDE3E6001246AB /* OcrCheckViewController.swift in Sources */,
 				9EC6F32125E3924800654D08 /* RecognitionLanguage.swift in Sources */,
+				9EB7804E25E4737900D854D0 /* JHSpeech.swift in Sources */,
+				9EB7805225E489A100D854D0 /* AudioPowerVisualizerView.swift in Sources */,
 				9EC6F2E925E38E4D00654D08 /* CardTesseractManager.swift in Sources */,
 				9ECD3B6025DC8E200085E367 /* ScannerViewController.swift in Sources */,
 				9E709D2225DCDAD600AB76CE /* VisionViewController.swift in Sources */,
@@ -365,6 +400,7 @@
 				9EC6F32625E3924800654D08 /* LanguageStringConverter.swift in Sources */,
 				9E709D2B25DD00E000AB76CE /* LabelCheckViewController.swift in Sources */,
 				9EC6F32925E3924800654D08 /* SwiftyTesseract.swift in Sources */,
+				9EB7805025E4738F00D854D0 /* SttViewController.swift in Sources */,
 				9EC6F2DE25E3816700654D08 /* CardData.swift in Sources */,
 				9E709D2625DCDC8800AB76CE /* StringUtils.swift in Sources */,
 				9EC6F2CB25E3780B00654D08 /* CardTableViewCell.swift in Sources */,

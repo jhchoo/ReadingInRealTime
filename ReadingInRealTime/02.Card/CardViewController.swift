@@ -102,7 +102,11 @@ extension CardViewController: VNDocumentCameraViewControllerDelegate {
         }
         
         scanImage.image = scan.imageOfPage(at: 0)
-        scanData.removeAll()
+        DispatchQueue.main.async {
+            self.tableView.setEmptyMessage("로딩중")
+            self.scanData.removeAll()
+            self.tableView.reloadData()
+        }
         
         controller.dismiss(animated: true) { [weak self] in
             if let img = self?.scanImage.image {

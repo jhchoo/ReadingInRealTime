@@ -11,26 +11,35 @@ import UIKit
 extension UITableView {
 
     func setEmptyMessage(_ message: String) {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageLabel.text = message
-        messageLabel.textColor = .black
-        messageLabel.numberOfLines = 0
-        messageLabel.textAlignment = .center
-        messageLabel.font = UIFont.systemFont(ofSize: 15)
-        messageLabel.sizeToFit()
-        view.addSubview(messageLabel)
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            messageLabel.topAnchor.constraint(equalTo: view.topAnchor),
-            messageLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
-            ])
         
-        self.backgroundView = view
-        self.backgroundView?.backgroundColor = UIColor.clear
-        self.separatorStyle = .none
+        if let bgView = self.backgroundView {
+            for item in bgView.subviews {
+                if let label = item as? UILabel {
+                    label.text = message
+                }
+            }
+        } else {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+            messageLabel.text = message
+            messageLabel.textColor = .black
+            messageLabel.numberOfLines = 0
+            messageLabel.textAlignment = .center
+            messageLabel.font = UIFont.systemFont(ofSize: 15)
+            messageLabel.sizeToFit()
+            view.addSubview(messageLabel)
+            messageLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                messageLabel.topAnchor.constraint(equalTo: view.topAnchor),
+                messageLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+                messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+                ])
+            
+            self.backgroundView = view
+            self.backgroundView?.backgroundColor = UIColor.clear
+            self.separatorStyle = .none
+        }
     }
     
     func emptyHidden(_ count: Int = 0) {
